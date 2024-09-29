@@ -14,7 +14,7 @@
     }
 
     div:nth-child(3) {
-        justify-self: end; /*terceira div no fim*/
+        justify-self: end; /*alinhar a terceira div no fim da página*/
     }
 
 #secondary {
