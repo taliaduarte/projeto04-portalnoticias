@@ -40,3 +40,19 @@ a:hover {
 h1, h1, h3 {
     font: inherit;
 }
+
+.container {
+    max-width: 1280px; /*valor do auto layout figma, tamanho container*/
+    padding-inline: 32px; /*espaço em cima e baixo*/
+    margin-inline: auto; /*espaço eixo horizontal*/
+}
+
+/*utility-first: classe utilitária*/
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}

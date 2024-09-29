@@ -1,0 +1,25 @@
+#primary {
+    padding-block: 20px;
+}
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /*nesting CSS*/
+    div:nth-child(2) {
+        margin-inline: auto; /*centralizou o logo*/
+    }
+
+    div:nth-child(3) {
+        justify-self: end; /*terceira div no fim*/
+    }
+
+#secondary {
+    padding-block: 14px;
+    border: solid 1px var(--stroke-color);
+    border-inline: none; /*remover borda da lateral*/
+    justify-content: space-between; /*alinhar os elementos no centro com espaço entre eles*/
+}
