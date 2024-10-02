@@ -55,3 +55,16 @@ img {
 main {
     margin-top: 52px;
 }
+
+
+.content-tag {
+    display: inline-block; /*quero os dois comportamentos, o padding se comporta melhor*/
+    background-color: var(--brand-color-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font: 500 10px/1.2 var(--font-family); /*peso 500, 10px com 1.2 altura de linha*/
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color-primary);
+    box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.251);
+}

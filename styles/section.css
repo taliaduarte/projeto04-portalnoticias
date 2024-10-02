@@ -10,6 +10,17 @@
     position: relative;
 }
 
+figcaption {
+    position: absolute;
+    bottom: 0px;
+
+    padding: 24px;
+}
+
+h2 {
+    margin-top: 8px;
+}
+
 .card::before {
    
     content: "";
@@ -21,4 +32,21 @@
         transparent 0%,
         #020617 100%
     );
+}
+
+/*texto duas vezes grande*/
+.text-2xl {
+    font: var(--h1);
+}
+
+.text-xl {
+    font: var(--h2);
+}
+
+.text-lg {
+    font: var(--h3);
+}
+
+.text-sm {
+    font: var(--text-sm);
 }
