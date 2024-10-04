@@ -56,3 +56,52 @@ h2 {
 .text-sm {
     font: var(--text-sm);
 }
+
+#weekly > div {
+    grid-template-columns: repeat(4, 292px); /*292px a largura das imagens figma*/
+}
+
+#weekly > img {
+    height: 160px;
+}
+
+/*todo section que estiver com uma header vai receber isso*/
+section header {
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;
+    font: var(--text-span);
+}
+
+section header a {
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+}
+
+section header a span {
+    background-image: url(../assets/icons/ArrowRight.svg);
+    width: 16px;
+    height: 16px;
+   
+}
+
+section header a:hover span {
+    background-image: url(../assets/icons/ArrowRight-hover.svg);
+}
+
+#weekly figure {
+    position: relative;
+}
+
+/*colocar as tags azuis acima da imagens*/
+#weekly figure .content-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+#weekly p {
+    margin-top: 8px;
+    font-weight: 800;
+    font: var(--text-span);
+}
