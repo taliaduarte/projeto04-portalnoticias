@@ -40,23 +40,6 @@ h2 {
     );
 }
 
-/*texto duas vezes grande*/
-.text-2xl {
-    font: var(--h1);
-}
-
-.text-xl {
-    font: var(--h2);
-}
-
-.text-lg {
-    font: var(--h3);
-}
-
-.text-sm {
-    font: var(--text-sm);
-}
-
 #weekly > div {
     grid-template-columns: repeat(4, 292px); /*292px a largura das imagens figma*/
 }
@@ -98,10 +81,21 @@ section header a:hover span {
     position: absolute;
     top: 8px;
     left: 8px;
+    
 }
 
 #weekly p {
     margin-top: 8px;
     font-weight: 800;
     font: var(--text-span);
+    
+}
+
+
+/*usei a tag abaixo para colocar os elementos um abaixo do outro ao lado da img*/
+.grid-row {
+    display: inline-block;
+    grid-auto-flow: row;
+    padding-top:  8px;
+    
 }
