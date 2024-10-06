@@ -53,8 +53,16 @@ img {
 }
 
 main {
-    margin-top: 52px;
-    gap: 80px;
+    margin-block: 52px; /*cima e embaixo*/
+    row-gap: 80px;
+    column-gap: 32px; /*espaço entre os elementos ads e a IA*/
+
+    grid-template-columns: 2fr 1.37fr;
+
+    grid-template-areas:
+     "featured featured"
+     "weekly weekly"
+     "IA aside";
 }
 
 

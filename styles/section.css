@@ -1,4 +1,9 @@
+#featured {
+    grid-area: featured;
+}
+
 #featured img {
+    grid-area: featured;
     height: 100%;
     object-fit: cover;
     border-radius: 4px; /*arredondar as bordas*/
@@ -38,6 +43,10 @@ h2 {
         transparent 0%,
         #020617 100%
     );
+}
+
+#weekly {
+    grid-area: weekly;
 }
 
 #weekly > div {
@@ -98,4 +107,37 @@ section header a:hover span {
     grid-auto-flow: row;
     padding-top:  8px;
     
+}
+
+#IA {
+    grid-area: IA;
+}
+
+#IA img {
+
+    width: 176px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#IA h3 {
+    margin-block: 8px 4px;
+}
+
+#aside {
+    grid-area: aside;
+}
+
+#more {
+    margin-top: 32px;
+}
+
+#more img {
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#more h3 {
+    margin-top: 8px;
 }
