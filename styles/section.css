@@ -20,8 +20,6 @@ figcaption {
     bottom: 0px;
 
     padding: 24px;
-
-  
 }
 
 figcaption:has(.text-lg) {
