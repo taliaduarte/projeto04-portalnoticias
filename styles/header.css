@@ -2,24 +2,159 @@
     padding-block: 20px;
 }
 
+div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+div:nth-child(2) {
+    margin-inline: auto; /*centralizou o logo*/
+}
+
+div:nth-child(3) {
+    justify-self: end; /*alinhar a terceira div no fim da página*/
+}
+
+
+#secondary ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+    font: var(--text-sm);
+    color: var(--text-color-secondary);
+
+    padding-block: 14px;
+    border: solid 1px var(--stroke-color);
+    border-inline: none;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+#secondary ul li a:hover {
+    color: var(--brand-color-light);
+}
+
+/* ---- MOBILE ---- */
+/* Oculta o checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícone de menu (botão) */
+.menu-btn {
+    display: none; /* Oculta no desktop */
+    position: fixed;
+    top: 23px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-btn img {
+    width: 100%;
+    height: auto;
+}
+
+/* Menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0px;
+    left: -250px; /* Escondido */
+    width: 250px;
+    height: 100vh;
+    background: var(--bg-color);
+    font: var(--text-sm);
+    color: var(--text-color-secondary);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+}
+
+.menu-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-lateral ul li a:hover {
+    color: var(--brand-color-light);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Exibir menu quando checkbox for marcado */
+#menu-toggle:checked ~ .menu-lateral {
+    left: 0;
+}
+
+
+
+@media (max-width: 767px) {
+    
+    /*Estilizar o menu mobile*/
+    #secondary ul {
+        display: none;
+    }
+
     div {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 8px;
     }
-
-    /*nesting CSS*/
+    
     div:nth-child(2) {
         margin-inline: auto; /*centralizou o logo*/
     }
-
+    
     div:nth-child(3) {
         justify-self: end; /*alinhar a terceira div no fim da página*/
+        top: 23px;
+        left: 15px;
     }
 
-#secondary {
-    padding-block: 14px;
-    border: solid 1px var(--stroke-color);
-    border-inline: none; /*remover borda da lateral*/
-    justify-content: space-between; /*alinhar os elementos no centro com espaço entre eles*/
+    .logo-mobile {
+        position: absolute;  /* Faz a div sair da sequência normal de fluxo */
+        left: 50%;  /* Coloca no centro da tela */
+        transform: translateX(-50%); 
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    header .container-header {
+        display: grid;
+        justify-content: space-between; /*coloca espaço entre os elementos do container*/
+        align-items: center;
+    }
+
+    #profile {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .cards {
+        flex-direction: row; /* Muda para linha (lado a lado) em telas maiores */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        justify-content: center; /* Centraliza horizontalmente */
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
 }

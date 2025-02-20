@@ -14,33 +14,58 @@
 <body>
     <header class="container">
         <nav id="primary" class="grid grid-flow-col">
-            <div><!--3 elementos no primeiro menu-->
+            <div class="desktop-only"><!--3 elementos no primeiro menu-->
                 <img src="assets/icons/List.svg" alt="ícone de menu">
                 <strong>Menu</strong>
             </div>
 
-            <div>
+            <div class="logo-mobile">
                 <img src="assets/Logo.svg" alt="TechNews logo">
             </div>
 
             <div>
-                <strong>Buscar</strong>
+                <strong class="desktop-only">Buscar</strong>
                 <img src="assets/icons/MagnifyingGlass.svg" alt="ícone de lupa para pesquisa">
             </div>
         </nav>
-        <nav id="secondary" class="grid grid-flow-col">
-            <a href="#">Inteligência Artificial</a>
-            <a href="#">Blockchain</a>
-            <a href="#">Hologramas</a>
-            <a href="#">Internet</a>
-            <a href="#">Vestíveis</a>
-            <a href="#">Realidade Aumentada</a>
-            <a href="#">Realidade Virtual</a>
+
+        <!-- Checkbox invisível para controlar o menu -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Ícone de menu (botão) -->
+        <label for="menu-toggle" class="menu-btn">
+            <img src="assets/icons/List.svg" alt="ícone de menu">
+        </label>
+
+        <!-- Menu lateral (somente no mobile) -->
+        <nav class="menu-lateral">
+            <ul>
+                <li><a href="#">Inteligência Artificial</a></li>
+                <li><a href="#">Blockchain</a></li>
+                <li><a href="#">Hologramas</a></li>
+                <li><a href="#">Internet</a></li>
+                <li><a href="#">Vestíveis</a></li>
+                <li><a href="#">Realidade Aumentada</a></li>
+                <li><a href="#">Realidade Virtual</a></li>
+            </ul>
+        </nav>
+
+
+        <nav id="secondary" class="grid grid-flow-col"> 
+            <ul>
+                <li><a href="#">Inteligência Artificial</a></li>
+                <li><a href="#">Blockchain</a></li>
+                <li><a href="#">Hologramas</a></li>
+                <li><a href="#">Internet</a></li>
+                <li><a href="#">Vestíveis</a></li>
+                <li><a href="#">Realidade Aumentada</a></li>
+                <li><a href="#">Realidade Virtual</a></li>
+            </ul>
         </nav>
     </header>
 
     <main class="grid container">
-        <section id="featured" class="grid grid-flow-col gap-16">
+        <section id="featured" class="grid grid-flow-col gap-16 grid-mobile">
             <figure class="card">
                 <img src="assets/imagens/Image 01.png" alt="Robôs domésticos começam a ser adotados para tarefas diárias, prometendo mais conforto e eficiência nas residências.">
                 <figcaption>
@@ -51,7 +76,7 @@
                 </figcaption>
             </figure>
 
-            <div class="grid grid-cols-2 gap-16">
+            <div class="grid grid-cols-2 gap-16 grid-mobile">
                 <figure class="card">
                     <img src="assets/imagens/Image 02.png" alt="Novo Smartphone Projetor 3D chega ao mercado, transformando a forma como vemos nosss telas.">
                     <figcaption>
@@ -96,7 +121,7 @@
         </section>
 
         <section id="weekly">
-            <header class="grid grid-flow-col"> <!--colocou os elementos em colunas: lado a lado-->
+            <header class="grid mobile-flex"> <!--colocou os elementos em colunas: lado a lado-->
                 <h3>Mais lidas da semana</h3>
                 <a href="#" class="grid grid-flow-col">
                     <strong>Ver tudo</strong>
@@ -104,7 +129,8 @@
                 </a>
             </header>
 
-            <div class="grid gap-16">
+
+            <div class="grid gap-16 grid-mobile">
                 <figure>
                     <span class="content-tag">veículos</span>
                     <img src="assets/imagens/Image 06.png" alt="">
@@ -149,7 +175,7 @@
             </header>
 
             <div class="grid gap-32">
-                <article class="grid  grid-flow-col gap-16">
+                <article class="grid  grid-flow-col gap-16 reverse-order">
                     <div class="grid grid-row">
                         <span class="content-tag">Inteligência Artificial</span>
                         <h3 class="text-xl">
@@ -164,7 +190,7 @@
                     </div>
                 </article>
 
-                <article class="grid  grid-flow-col gap-16">
+                <article class="grid  grid-flow-col gap-16 reverse-order">
                     <div class="grid grid-row">
                         <span class="content-tag">Inteligência Artificial</span>
                         <h3 class="text-xl">
@@ -179,7 +205,7 @@
                     </div>
                 </article>
 
-                <article class="grid  grid-flow-col gap-16">
+                <article class="grid  grid-flow-col gap-16 reverse-order">
                     <div class="grid grid-row">
                         <span class="content-tag">Inteligência Artificial</span>
                         <h3 class="text-xl">
@@ -194,7 +220,7 @@
                     </div>
                 </article>
 
-                <article class="grid  grid-flow-col gap-16">
+                <article class="grid  grid-flow-col gap-16 reverse-order">
                     <div class="grid grid-row">
                         <span class="content-tag">Inteligência Artificial</span>
                         <h3 class="text-xl">

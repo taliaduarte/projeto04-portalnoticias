@@ -23,17 +23,37 @@
 
 /*texto duas vezes grande*/
 .text-2xl {
-    font: var(--h1);
+    font: var(--title-lg);
 }
 
 .text-xl {
-    font: var(--h2);
+    font: var(--title-md);
 }
 
 .text-lg {
-    font: var(--h3);
+    font: var(--title-sm);
 }
 
 .text-sm {
     font: var(--text-sm);
+}
+
+.mobile-flex {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .grid-mobile {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr;
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: none;
+    }
+
+    
+
+    
 }

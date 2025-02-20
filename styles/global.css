@@ -14,11 +14,13 @@
     --text-color-secondary: #CBD5E1;
 
     --font-family: 'Archivo', sans-serif;
-    --h1: 800 24px/135% var(--font-family);
-    --h2: 800 16px/140% var(--font-family);
-    --h3: 800 14px/140% var(--font-family);
-    --text-span: 600 14px/145% var(--font-family);
-    --text: 400 14px/145% var(--font-family);
+    --title-lg: 800 24px/135% var(--font-family);
+    --title-md: 700 16px/140% var(--font-family);
+    --title-sm: 600 14px/140% var(--font-family);
+
+    
+    --text-subtitle: 600 14px/145% var(--font-family);
+    --text-md: 400 14px/145% var(--font-family);
     --text-sm: 400 14px/160% var(--font-family); /*small é o paragraph padrão do figma*/
 }
 
@@ -77,4 +79,45 @@ main {
     color: var(--text-color-primary);
     box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.251);
     
+}
+
+
+/* Por padrão, os elementos aparecem */
+.desktop-only {
+    display: initial;
+}
+
+/* Oculta os elementos em telas menores que 768px */
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        --max-width: 375px; /*fator máximo que é permitido de largura, pois é o tamanho width tela mobile figma*/
+        width: min(var(--max-width), 100% - var(--padding-inline-lg) * 2);
+        padding-inline: 1rem;
+    }
+
+    main {  
+        margin-block: 52px; /*cima e embaixo*/
+        row-gap: 2rem;
+        column-gap: 20px; /*espaço entre os elementos ads e a IA*/
+
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "featured featured"
+        "weekly weekly"
+        "IA IA"
+        "aside aside";
+    }
+
+    aside {
+        order: 2;
+        grid-column: 1 / -1; /* Garante que o aside ocupe toda a largura disponível */
+        padding: 16px; /* Ajuste de padding para melhorar o espaçamento */
+        width: 100%;
+    }
+
 }

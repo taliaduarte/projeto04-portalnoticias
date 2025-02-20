@@ -57,9 +57,14 @@ h2 {
 
 /*todo section que estiver com uma header vai receber isso*/
 section header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     border-top: 1px solid var(--stroke-color);
     padding-block: 12px 24px;
-    font: var(--text-span);
+    font: var(--text-subtitle);
+    color: var(--text-color-secondary);
 }
 
 section header a {
@@ -70,6 +75,7 @@ section header a {
 
 section header a span {
     background-image: url(../assets/icons/ArrowRight.svg);
+    background-repeat: no-repeat;
     width: 16px;
     height: 16px;
    
@@ -93,9 +99,8 @@ section header a:hover span {
 
 #weekly p {
     margin-top: 8px;
-    font-weight: 800;
-    font: var(--text-span);
-    
+    font: var(--title-md);
+    padding-bottom: 2rem;
 }
 
 
@@ -103,8 +108,7 @@ section header a:hover span {
 .grid-row {
     display: inline-block;
     grid-auto-flow: row;
-    padding-top:  8px;
-    
+    padding-top:  8px; 
 }
 
 #IA {
@@ -138,4 +142,102 @@ section header a:hover span {
 
 #more h3 {
     margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+    .grid-row {
+        padding-top: 0;
+    }
+
+    .card .text-2xl {
+        overflow: hidden; /* Esconde o excesso de texto */
+        text-overflow: ellipsis; /* Adiciona "..." ao final */
+        max-width: 100%; /* Ajusta conforme o container */
+        font-size: 15px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Define o número máximo de linhas */
+        -webkit-box-orient: vertical;
+    }
+
+    .card .text-lg {
+        overflow: hidden; /* Esconde o excesso de texto */
+        text-overflow: ellipsis; /* Adiciona "..." ao final */
+        max-width: 100%; /* Ajusta conforme o container */
+        font-size: 15px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Define o número máximo de linhas */
+        -webkit-box-orient: vertical;
+    }
+
+    .text-xl {
+        overflow: hidden; /* Esconde o excesso de texto */
+        text-overflow: ellipsis; /* Adiciona "..." ao final */
+        max-width: 100%; /* Ajusta conforme o container */
+        font-size: 15px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Define o número máximo de linhas */
+        -webkit-box-orient: vertical;
+    }
+
+    .text-sm {
+        overflow: hidden; /* Esconde o excesso de texto */
+        text-overflow: ellipsis; /* Adiciona "..." ao final */
+        max-width: 100%; /* Ajusta conforme o container */
+        font-size: 12px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    } 
+
+    #more .grid-row h3 {
+        font-size: 12px;
+        font-weight: 600;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    header > h3 {
+        font-size: 0.73rem;
+        font: var(--title-sm);  
+    }
+
+    header strong {
+        font-size: 0.73rem;
+        font: var(--title-sm);
+    }
+
+    #weekly > div {
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    .mobile-flex {
+        display: flex;
+        align-items: center; /* Alinha os itens verticalmente */
+        justify-content: space-between; /* Empurra os elementos para os extremos */
+    }
+
+    .reverse-order {
+        display: flex;
+        flex-direction: row-reverse; /* Inverte a ordem apenas para os elementos com essa classe */
+    }
+
+    .reverse-order img {
+        order: 1; /* Garante que a imagem venha depois dos textos */
+        width: 100%; /* A imagem ocupa 100% da largura do seu contêiner pai */
+        max-width: 80px; /* Limita a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        
+        align-self: flex-start;
+    }
+
+    .reverse-order .grid-row {
+        order: 0; /* Garante que os textos fiquem antes da imagem */
+    }
 }
